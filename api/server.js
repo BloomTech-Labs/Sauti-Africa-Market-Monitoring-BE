@@ -4,7 +4,6 @@ const usersRouter = require("../users/users-router");
 const authRouter = require("../auth//auth-router");
 const wholesaleRouter = require("../data/wholesale-router")
 const retailRouter = require("../data/retail-router")
-const qualityRouter = require("../data/quality-router")
 const restricted = require("../auth/authenticator");
 
 
@@ -20,7 +19,6 @@ server.use(express.json());
 server.use("/users", restricted, usersRouter);
 server.use("/wholesale", restricted, wholesaleRouter)
 server.use("/retail", restricted, retailRouter)
-// server.use("/quality", restricted, qualityRouter)
 server.use("/auth", authRouter);
 
 
